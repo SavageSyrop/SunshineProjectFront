@@ -1,0 +1,18 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Main page</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css"
+          th:href="@{/css/main_page.css}"/>
+</head>
+<body>
+<div th:replace="/fragments/header"></div>
+<div class="container">
+    <div class="column chats">
+        <a th:each="chatParticipation : ${chatList}" th:href="'/chat' + ${chatParticipation.chat.id}" th:text="${chatParticipation.chat.name}"></a>
+    </div>
+    <div th:replace="/fragments/right_menu"></div>
+</div>
+<div th:replace="/fragments/footer"></div>
+</body>
+</html>

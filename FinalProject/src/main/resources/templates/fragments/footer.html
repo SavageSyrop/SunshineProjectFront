@@ -1,0 +1,20 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Footer!</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/footer.css}"/>
+    <script type="text/javascript">
+            function date() {
+                var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+                var today = new Date();
+                today.setTime(today.getTime());
+                document.getElementById("spanDate").innerHTML = months[today.getMonth()] + " " + today.getDate()+ ", " + today.getFullYear();
+            }
+    </script>
+</head>
+<body onload="date()">
+<footer>
+    <span id="spanDate" class="dateStyle"></span>
+</footer>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css"
+          th:href="@{/css/main_page.css}"/>
+</head>
+<body>
+<div class="column right-column">
+    <form th:action="@{/currentUser}">
+        <button>Main</button>
+    </form>
+    <form th:action="@{/chats}">
+        <button>Chats</button>
+    </form>
+    <form>
+        <button>Friends</button>
+    </form>
+    <form>
+        <button>Groups</button>
+    </form>
+    <form>
+        <button>User wall</button>
+    </form>
+</div>
+</body>
+</html>

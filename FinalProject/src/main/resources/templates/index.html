@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Welcome!</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/index.css}"/>
+</head>
+<body>
+    <div th:replace="/fragments/header"></div>
+    <h1 class="main-label">Welcome to Sunshine!</h1>
+    <div class="main-container">
+        <div>
+            <img width="100%" height="auto" th:src="@{/images/logo.png}">
+        </div>
+        <div class="button-container">
+            <form th:action="@{/registration}">
+                <button>Go to registration form</button>
+            </form>
+            <form th:action="@{/login}">
+                <button>Login</button>
+            </form>
+        </div>
+    </div>
+    <div th:replace="/fragments/footer"></div>
+</body>
+</html>

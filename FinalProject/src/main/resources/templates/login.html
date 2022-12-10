@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/login.css}"/>
+</head>
+<body>
+<div th:replace="/fragments/header"></div>
+<div class="login-container">
+    <form th:action="@{/login}" th:object="${userData}" method="post" class="register-box">
+        <div>
+            <h5>Username</h5>
+            <input type="text" name="username" th:field="*{username}" required>
+        </div>
+        <div>
+            <h5>Password</h5>
+            <input type="text" name="password" th:field="*{password}" required>
+        </div>
+        <input type="hidden" name="${}_csrf.parameterName}" value="${_csrf.token}"/>
+        <input id="submit" type="submit" value="Submit">
+        <a href="/forgotPassword">Forgot password?</a>
+    </form>
+</div>
+<div th:replace="/fragments/footer"></div>
+</body>
+</html>

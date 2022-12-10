@@ -1,0 +1,31 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Main page</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css"
+          th:href="@{/css/main_page.css}"/>
+</head>
+<body>
+<div th:replace="/fragments/header"></div>
+<div class="container">
+    <div class="column">
+        <h2 th:text="${userInfo.username}"></h2>
+        <ul>
+            <li><b>ID: </b><span th:text="${userInfo.id}"></span></li>
+            <li><b>Email: </b><span th:text="${userInfo.email}"></span></li>
+            <li><b>Gender: </b><span th:text="${userInfo.genderType}"></span></li>
+            <li th:if="${userInfo.firstName != null}"><b>First name: </b><span th:text="${userInfo.firstName}"></span>
+            </li>
+            <li th:if="${userInfo.lastName != null}"><b>Last name: </b><span th:text="${userInfo.lastName}"></span></li>
+            <li th:if="${userInfo.dateOfBirth != null}"><b>Date of birth: </b><span
+                    th:text="${userInfo.dateOfBirth}"></span></li>
+            <li th:if="${userInfo.city != null}"><b>City: </b><span th:text="${userInfo.city}"></span></li>
+            <li th:if="${userInfo.openProfile != null}"><b>Open profile: </b><span
+                    th:text="${userInfo.openProfile}"></span></li>
+        </ul>
+    </div>
+    <div th:replace="/fragments/right_menu"></div>
+</div>
+<div th:replace="/fragments/footer"></div>
+</body>
+</html>

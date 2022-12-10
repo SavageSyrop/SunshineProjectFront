@@ -1,0 +1,31 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Main page</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css"
+          th:href="@{/css/main_page.css}"/>
+</head>
+<body>
+<div th:replace="/fragments/header"></div>
+<div class="container">
+    <div class="column messages">
+        <h2 th:text="${chat.name}"></h2>
+        <div class="messages_container">
+            <div th:each="message : ${chat.messages}" class="message">
+                <div>
+                    <b th:text="${message.senderName}" class="senderName"></b>
+                    <p th:text="${message.text}" class="text"></p>
+                </div>
+                <p th:text="${message.sendingTime}" class="sendingTime"></p>
+            </div>
+        </div>
+        <form class="message-form" th:action="@{'/chat?chatId=' + ${chat.id}}" th:object="${messageDto}" method="post">
+            <input class="message-input" type="text" name="text" th:field="*{text}" required>
+            <input id="submit" type="submit" value="Send">
+        </form>
+    </div>
+    <div th:replace="/fragments/right_menu"></div>
+</div>
+<div th:replace="/fragments/footer"></div>
+</body>
+</html>

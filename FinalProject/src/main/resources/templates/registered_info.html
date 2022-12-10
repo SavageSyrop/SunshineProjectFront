@@ -1,0 +1,61 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${userData.userInfo.username}">Successfully registered</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+<h2>You are registered!</h2>
+<table>
+    <tbody>
+    <tr>
+        <td><strong>ID:</strong></td>
+        <td><span th:text="${userData.userInfo.id}"></span></td>
+    </tr>
+    <tr>
+        <td><strong>Username:</strong></td>
+        <td><span th:text="${userData.userInfo.username}"></span></td>
+    </tr>
+    <tr>
+        <td><strong>Email:</strong></td>
+        <td><span th:text="${userData.userInfo.email}"></span></td>
+    </tr>
+    <tr>
+        <td><strong>Gender:</strong></td>
+        <td><span th:text="${userData.userInfo.genderType}"></span></td>
+    </tr>
+    <tr>
+        <td><strong>First name:</strong></td>
+        <td><span th:text="${userData.userInfo.firstName}"></span></td>
+    </tr>
+    <tr>
+        <td><strong>Last name:</strong></td>
+        <td><span th:text="${userData.userInfo.lastName}"></span></td>
+    </tr>
+    <tr>
+        <td><strong>Date of birth:</strong></td>
+        <td><span th:text="${userData.userInfo.dateOfBirth}"></span></td>
+    </tr>
+    <tr>
+        <td><strong>City:</strong></td>
+        <td><span th:text="${userData.userInfo.city}"></span></td>
+    </tr>
+    <tr>
+        <td><strong>Open profile:</strong></td>
+        <td><span th:text="${userData.userInfo.openProfile}"></span></td>
+    </tr>
+    <tr>
+        <td><strong>Role:</strong></td>
+        <td><span th:text="${userData.roleName}"></span></td>
+    </tr>
+    <tr>
+        <td colspan="2">&nbsp;<a th:href="@{/login}"
+                                 class="btn btn-success"> <i class="fa fa-arrow-circle-o-left"></i>&nbsp;Login
+        </a></td>
+    </tr>
+    </tbody>
+</table>
+<p>Now follow instruction in email that was sent to you!</p>
+</body>
+</html>

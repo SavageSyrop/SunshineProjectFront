@@ -1,0 +1,119 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    padding: 30px 5% 10px 5%;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.right-column {
+    align-items: stretch;
+    justify-content: space-evenly;
+}
+.right-column button {
+    padding: 10px 20px;
+    background-color: #f2af00;
+    border-radius: 10px;
+    border-width: 1px;
+    font-size: 24px;
+    width: 100%;
+    cursor: pointer;
+}
+h2 {
+    color: #f2af00;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.container ul {
+    font-size: 24px;
+    list-style: none;
+}
+.container ul li {
+    margin-top: 10px;
+}
+.chats {
+    justify-content: flex-start;
+    gap: 10px;
+    flex-grow: 1;
+    padding-right: 20%;
+}
+.chats a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    background-color: #ffce00;
+    padding: 10px 20px;
+    border: solid 1px;
+    border-radius: 5px;
+}
+
+.messages {
+    justify-content: flex-start;
+    flex-grow: 1;
+    padding-right: 20%;
+}
+.messages_container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.message {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: solid 1px #f2af00;
+    border-radius: 5px;
+    align-items: center;
+    padding: 15px;
+}
+
+.message-form {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.message-input
+{
+        border: 1px solid #ffce00;
+        border-radius: 20px;
+        width: 100%;
+        display: block;
+        padding: 10px;
+        box-sizing: border-box;
+        color: black;
+        background-color: #ffffff;
+        position: relative;
+        transition: 0.5s;
+}
+
+#submit
+{
+    margin: 10px;
+    border: 1px solid #ffce00;
+    border-radius: 20px;
+    width: 170px;
+    height: 30px;
+    color: black;
+    box-shadow: 2px 4px 1px #000000;
+    bottom: 0px;
+    align-self: center;
+}
